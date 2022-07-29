@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Custom Elements</title>
    <style>
-    :root{
-        
+    my-element{
+        --primary-color:blue;
+        --heading-primary:40px;
+    }
+    .segundo{
+        --primary-color:tomato;
+    }
+    .tercero{
+        --secondary-color:green;
     }
    </style>
 </head>
@@ -16,6 +23,14 @@
     <my-element>
         <span slot="parrafo">Soy texto fuera del componente,soy otro texto</span>
         <span class="texto" slot="title">Titulo Slot 1</span>    
+    </my-element>
+    <my-element class="segundo">
+        <span slot="parrafo">Soy texto fuera del componente,soy otro texto</span>
+        <span class="texto" slot="title">Titulo Slot 2</span>    
+    </my-element>
+    <my-element class="tercero">
+        <span slot="parrafo">Soy texto fuera del componente,soy otro texto</span>
+        <span class="texto" slot="title">Titulo Slot 3</span>    
     </my-element>
     <script type="module" src="my-element.js"></script>
     
